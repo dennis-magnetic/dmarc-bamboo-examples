@@ -1,0 +1,27 @@
+---
+version: 2
+plan:
+  project-key: DMARC
+  key: DMAR
+  name: kubist-bamboo-example
+
+# List of plan's stages and jobs
+stages:
+  - Build the rocket stage:
+    - Build
+
+#Job definition
+Build:
+  tasks:
+    - script:
+        - ls -lsa
+        - echo "example"
+        - sleep 1
+        - echo 'Built it'
+  # # Job's requirements
+  # requirements:
+  #    - isRocketFuel
+  # # Job's artifacts. Artifacts are shared by default.
+  # artifacts:
+  #    - name: Red rocket built
+  #      pattern: falcon/red/wings
